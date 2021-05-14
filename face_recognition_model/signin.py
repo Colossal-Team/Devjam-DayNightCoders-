@@ -4,7 +4,9 @@ faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades +'haarcascade_frontalf
 font = cv2.FONT_HERSHEY_SIMPLEX
 video_capture = cv2.VideoCapture(0)
 name="jello"
-location='/Training_images'
+PROJECT_ROOT = path.abspath(path.dirname(__file__))
+location = path.join(PROJECT_ROOT, 'Training_images')
+
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
