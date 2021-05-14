@@ -6,7 +6,8 @@ import os
 from datetime import datetime
 
 # from PIL import ImageGrab
-path = 'Training_images'
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+path = os.path.join(PROJECT_ROOT, 'Training_images')
 images = []
 classNames = []
 myList = os.listdir(path)
