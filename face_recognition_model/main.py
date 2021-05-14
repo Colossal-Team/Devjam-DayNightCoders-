@@ -8,6 +8,7 @@ from datetime import datetime
 # from PIL import ImageGrab
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 path = os.path.join(PROJECT_ROOT, 'Training_images')
+# path2 =os.path.join(PROJECT_ROOT, 'Attendance.csv')
 images = []
 classNames = []
 myList = os.listdir(path)
