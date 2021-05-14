@@ -1,8 +1,10 @@
+from typing import Set
 import cv2
 import numpy as np
 import face_recognition
 import os
 from datetime import datetime
+
 # from PIL import ImageGrab
 path = 'Training_images'
 images = []
@@ -31,10 +33,10 @@ def markAttendance(name):
         for line in myDataList:
             entry = line.split(',')
             nameList.append(entry[0])
-            if name not in nameList:
-                now = datetime.now()
-                dtString = now.strftime('%H:%M:%S')
-                f.writelines(f'\n{name},{dtString}')
+        if name not in nameList:
+            now = datetime.now()
+            dtString = now.strftime('%H:%M:%S')
+            f.writelines(f'\n{name},{dtString}')
 encodeListKnown = findEncodings(images)
 print('Encoding Complete')
 cap = cv2.VideoCapture(0)
