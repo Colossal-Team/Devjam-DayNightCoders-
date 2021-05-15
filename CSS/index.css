@@ -5,20 +5,20 @@
     font-family: Poppins;
 }
 body{
-    margin-top: 30px;
+    padding-top: 30px;
     background-image: url("../Images/bg10.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: center;
-    background-size: cover;
     background-color: black;
-    /* background-size: contain; */
+    background-size:auto;
+    height: 1000px;
 }
 nav{
     /* border-bottom: 2px solid white; */
 }
 nav ul{
     overflow: auto;
-    height: 25%;
+    height: 150px;
     margin-left: 48%;
 }
 nav ul li{
