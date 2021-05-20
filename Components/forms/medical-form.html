@@ -19,15 +19,18 @@
     .card {
         margin: 5px;
     }
-    label{
+
+    label {
         cursor: pointer;
     }
+
     .radio-btn {
         float: right;
         cursor: pointer;
         padding: 0 20px;
     }
-    h2{
+
+    h2 {
         text-align: center;
         margin-top: 10px;
         padding-bottom: 10px;
@@ -52,18 +55,51 @@
     </nav>
     <h2>Medical Form (Diagnosis Informations)</h2>
     <form action="..." class="form-container">
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" required placeholder="First name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" required placeholder="Last name">
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" required placeholder="Blood Group">
+            </div>
+            <div class="col">
+                <input type="number" min="1" class="form-control" required placeholder="Age">
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col">
+                <input type="number" min="1" class="form-control" required placeholder="Weight (in kg)">
+            </div>
+            <div class="col">
+                <input type="number" min="1" class="form-control" required placeholder="Height (in cm)">
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col">
+                <input type="email" class="form-control" required placeholder="Username">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" required placeholder="Email Address">
+            </div>
+        </div><br>
+        <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required placeholder="Add Your Details Here..."></textarea>
+        </div>
         <div class="card">
             <div class="card-body">
                 1.&nbsp;&nbsp; Acquired Respiratory Distress Syndrome
                 <div class="form-check form-check-inline radio-btn">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                    value="option1">
+                        value="option1">
                     <label class="form-check-label" for="inlineRadio1">Yes</label>
-                <div class="form-check form-check-inline radio-btn">
-                </div>
                     <span style="margin-left:30px"> </span>
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                    value="option2">
+                        value="option2">
                     <label class="form-check-label" for="inlineRadio2">No</label>
                 </div>
             </div>
