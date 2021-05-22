@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% load static %}
+Verified
+{{ name }}
+{#{{ detail.0.content }}#}
+<button type="button" onclick="location.href='{% url 'log'  %}'">logout</button><br>
+{% for i in detail|slice:"0:"%}
+{#{% if i.title == name %}#}
+{% if i.usrname == name %}
+    <br>
+    {% if i.lname == "Kumar" %}
+    {{ i.bgrp }}
+{% endif %}
+
+{% endif %}
+
+{% endfor %}
+</body>
+</html>

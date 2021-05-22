@@ -1,9 +1,3 @@
-{% if messg %}
-<script>
-  alert('{{ messg }}')
-</script>
-
-{% endif %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,12 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.83.1">
-    <title>Diagnosis Tracker</title>
+    <title>Signin Template · Bootstrap v5.0</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
       {% load static %}
 
-    
+
 
     <!-- Bootstrap core CSS -->
 <link href="{%static 'App/bootstrap.min.css' %}" rel="stylesheet">
@@ -38,16 +32,19 @@
       }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="{%static 'App/signin.css' %}" rel="stylesheet">
   </head>
   <body class="text-center">
-    
+
 <main class="form-signin">
-  <form action='main' method='get'>
-    <img class="mb-4" src="{%static 'App/b-55-512.png' %}" alt="" width="250" height="250">
-    <h1 class="h3 mb-3 fw-bolder">Sign in</h1>
+  <form action='data' method='get'>
+{#    <img class="mb-4" src="{%static 'App/Training_images/' %}" alt="" width="250" height="250">#}
+      <img class="mb-4" src="../../static/App/Training_images/{{ f }}" alt="" width="250" height="250">
+    <h1 class="h3 mb-3 fw-bolder">Welcome!</h1>
+
+
 
 {#    <div class="form-floating">#}
 {#      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">#}
@@ -58,13 +55,20 @@
 {#      <label for="floatingPassword">Password</label>#}
 {#    </div>#}
 
+{#    <div class="checkbox mb-3">#}
+{#      <label>#}
+{#        <input type="checkbox" value="remember-me"> Remember me#}
+{#      </label>#}
+{#    </div>#}
+{#    <button class="w-100 btn btn-lg btn-dark" type="submit">{{ email }}</button>#}
 
 
-    <button class="w-100 btn btn-lg btn-dark" type="submit">Face Detect</button>
+          <h1>{{ s }}</h1>
 
-      <h5 class="h5 mb-3 fw-normal my-4">Not Registered?</h5>
 
-      <button class="w-50 btn btn-sm btn-dark" onclick="location.href='signup'" type="button">Register here!</button>
+{#      <h5 class="h5 mb-3 fw-normal my-4">Not Registered?</h5>#}
+
+      <button class="w-100 btn btn-sm btn-dark my-4" type="submit">Proceed to our Website!</button>
 
 
 
@@ -74,6 +78,6 @@
 </main>
 
 
-    
+
   </body>
 </html>

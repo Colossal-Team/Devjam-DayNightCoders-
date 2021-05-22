@@ -3,12 +3,15 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render, HttpResponse
 from django.shortcuts import render
+from .models import Post
 import pyrebase
 from django.contrib import messages
 
 # def index(request):
 #     return render(request, 'App/index.html')
+config = {
 
+}
 
 def about(request):
     return render(request, 'App/about.html')
@@ -40,7 +43,7 @@ def welcome(request):
     import cv2
     email = request.GET.get('Email', 'default')
     s = str(email)
-    index = s.index('.')
+    index = s.index('@')
     s = s[0:index]
     a = ".jpg"
     f = s+a
@@ -82,7 +85,7 @@ def welcome(request):
     cv2.destroyAllWindows()
 
     # email = request.GET.get('Email', 'default')
-    params = {'email': email ,'f':f}
+    params = {'email': email ,'f':f , 's':s}
     print(email)
 
     return render(request, 'App/welcome.html',params)
@@ -155,7 +158,7 @@ def main(request):
 
         if name is None :
             message = "Face not Recognised"
-            return render(request,'App/signin.html',{"messg":message})
+            return render(request,'App/index.html',{"messg":message})
 
 
         print(name)
@@ -186,7 +189,14 @@ def main(request):
         #     message = "Face not Recognised"
         #     return render(request,'App/signin.html',{"messg":message})
         #
-        params = {'name': name}
+        details = Post.objects.all()
+        print(details)
+        n = len(details)
+        b = ".jpg"
+        img = name+b
+        print(img)
+        params = {'name': name,'detail':details,'img':img}
+        # params = {'name': name}
         # print(name)
 
 
@@ -194,3 +204,80 @@ def main(request):
 
 def logout(request):
     return render(request,'App/index.html')
+
+def data(request):
+    email = request.GET.get('Email', 'default')
+    s = str(email)
+    # index = s.index('.')
+    # s = s[0:index]
+    params = {'s':s}
+    return render(request, 'App/data.html',params)
+
+
+def createpost(request):
+    if request.method == 'POST':
+        # if request.POST.get('fname') and request.POST.get('lname') and request.POST.get('usrname'):
+        post = Post()
+        post.usrname = request.POST.get('usrname')
+        post.fname = request.POST.get('fname')
+        post.lname = request.POST.get('lname')
+        post.bgrp = request.POST.get('bgrp')
+        post.age = request.POST.get('age')
+        post.wt = request.POST.get('wt')
+        post.ht = request.POST.get('ht')
+        post.txta = request.POST.get('txta')
+        post.que1 = request.POST.get('que1')
+        post.que2 = request.POST.get('que2')
+        post.que3 = request.POST.get('que3')
+        post.que4 = request.POST.get('que4')
+        post.que5 = request.POST.get('que5')
+        post.que6 = request.POST.get('que6')
+        post.que7 = request.POST.get('que7')
+        post.que8 = request.POST.get('que8')
+        post.que9 = request.POST.get('que9')
+        post.que10 = request.POST.get('que10')
+        post.que11 = request.POST.get('que11')
+        post.que12 = request.POST.get('que12')
+        post.que13 = request.POST.get('que13')
+        post.que14 = request.POST.get('que14')
+        post.que15 = request.POST.get('que15')
+        post.que16 = request.POST.get('que16')
+        post.que17 = request.POST.get('que17')
+        post.que18 = request.POST.get('que18')
+        post.que19 = request.POST.get('que19')
+        post.que20 = request.POST.get('que20')
+        post.que21 = request.POST.get('que21')
+        post.que22 = request.POST.get('que22')
+        post.que23 = request.POST.get('que23')
+        post.que24 = request.POST.get('que24')
+        post.que25 = request.POST.get('que25')
+        post.que26 = request.POST.get('que26')
+        post.que27 = request.POST.get('que27')
+        post.que28 = request.POST.get('que28')
+        post.que29 = request.POST.get('que29')
+        post.que30 = request.POST.get('que30')
+        post.que31 = request.POST.get('que31')
+        post.que32 = request.POST.get('que32')
+        post.que33 = request.POST.get('que33')
+        post.que34 = request.POST.get('que34')
+        post.que35 = request.POST.get('que35')
+        post.que36 = request.POST.get('que36')
+        post.que37 = request.POST.get('que37')
+        post.que38 = request.POST.get('que38')
+        post.que39 = request.POST.get('que39')
+        post.que40 = request.POST.get('que40')
+        post.que41 = request.POST.get('que41')
+        post.que42 = request.POST.get('que42')
+        post.que43 = request.POST.get('que43')
+        post.que44 = request.POST.get('que44')
+        post.que45 = request.POST.get('que45')
+        post.que46 = request.POST.get('que46')
+
+        post.save()
+
+        return render(request, 'App/success.html')
+
+def about(request):
+    return render(request, 'App/about.html')
+    # else:
+    #     return render(request, 'App/index.html')
