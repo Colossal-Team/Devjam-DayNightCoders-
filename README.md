@@ -7,7 +7,7 @@
 
 
 ## Introduction:
-  We have made a project centered around the theme education where we have tried to implement solutions which we feel can improve the way education is delivered online. We have tried to integrate hands on learning experience for the user.
+  We have made a project centered around the theme health where we have tried to implement solutions which we feel can improve the way large and effective database can be easily managed . We have tried to integrate machine learning experience in the project.
   
 ## Demo Video Link:
   <a href="https://drive.google.com/file/d/1XLyM-02PLUnytIBs35fu3lNH3yljkV9K/view">Video Link</a>
